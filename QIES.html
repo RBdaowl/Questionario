@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionario sull'Educazione Sentimentale</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .intro {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        .question {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            background-color: #fff;
+        }
+        .question label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .option {
+            margin-bottom: 8px;
+        }
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 30px auto;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .section-header {
+            background-color: #edf2f7;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 5px;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Questionario sull'Educazione Sentimentale</h1>
+        
+        <div class="intro">
+            <p>Caro/a studente/ssa,</p>
+            <p>Questo questionario è anonimo e serve per capire meglio le tue conoscenze ed esperienze riguardo alle relazioni affettive e all'educazione sessuale. Non ci sono risposte giuste o sbagliate, siamo interessati alla tua sincera opinione.</p>
+            <p>Le tue risposte ci aiuteranno a preparare al meglio il programma educativo.</p>
+        </div>
+
+        <form id="questionarioForm">
+            <div class="section-header">
+                <h2>Informazioni Generali</h2>
+            </div>
+
+            <div class="question">
+                <label>1. Quanti anni hai?</label>
+                <div class="option">
+                    <input type="radio" name="eta" value="14"> 14 anni
+                </div>
+                <div class="option">
+                    <input type="radio" name="eta" value="15"> 15 anni
+                </div>
+                <div class="option">
+                    <input type="radio" name="eta" value="16"> 16 anni
+                </div>
+            </div>
+
+            <div class="question">
+                <label>2. Con chi parli più spesso di sentimenti e relazioni?</label>
+                <div class="option">
+                    <input type="radio" name="confidenti" value="genitori"> Genitori
+                </div>
+                <div class="option">
+                    <input type="radio" name="confidenti" value="amici"> Amici
+                </div>
+                <div class="option">
+                    <input type="radio" name="confidenti" value="fratelli"> Fratelli/Sorelle
+                </div>
+                <div class="option">
+                    <input type="radio" name="confidenti" value="nessuno"> Nessuno
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h2>Conoscenze di Base</h2>
+            </div>
+
+            <div class="question">
+                <label>3. Hai mai ricevuto informazioni sulla riproduzione e la sessualità?</label>
+                <div class="option">
+                    <input type="radio" name="info_sessualita" value="si_scuola"> Sì, a scuola
+                </div>
+                <div class="option">
+                    <input type="radio" name="info_sessualita" value="si_famiglia"> Sì, in famiglia
+                </div>
+                <div class="option">
+                    <input type="radio" name="info_sessualita" value="si_amici"> Sì, dagli amici
+                </div>
+                <div class="option">
+                    <input type="radio" name="info_sessualita" value="si_internet"> Sì, da internet
+                </div>
+                <div class="option">
+                    <input type="radio" name="info_sessualita" value="no"> No, mai
+                </div>
+            </div>
+
+            <div class="question">
+                <label>4. Quanto ti senti informato/a sui cambiamenti del corpo durante l'adolescenza?</label>
+                <div class="option">
+                    <input type="radio" name="info_corpo" value="molto"> Molto informato/a
+                </div>
+                <div class="option">
+                    <input type="radio" name="info_corpo" value="abbastanza"> Abbastanza informato/a
+                </div>
+                <div class="option">
+                    <input type="radio" name="info_corpo" value="poco"> Poco informato/a
+                </div>
+                <div class="option">
+                    <input type="radio" name="info_corpo" value="niente"> Per niente informato/a
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h2>Relazioni e Sentimenti</h2>
+            </div>
+
+            <div class="question">
+                <label>5. Ti sei mai innamorato/a?</label>
+                <div class="option">
+                    <input type="radio" name="innamoramento" value="si_attuale"> Sì, lo sono adesso
+                </div>
+                <div class="option">
+                    <input type="radio" name="innamoramento" value="si_passato"> Sì, in passato
+                </div>
+                <div class="option">
+                    <input type="radio" name="innamoramento" value="no"> No, mai
+                </div>
+                <div class="option">
+                    <input type="radio" name="innamoramento" value="nonsicuro"> Non sono sicuro/a
+                </div>
+            </div>
+
+            <div class="question">
+                <label>6. Come riconosci di essere innamorato/a? (Puoi selezionare più risposte)</label>
+                <div class="option">
+                    <input type="checkbox" name="segni_amore" value="pensieri"> Penso sempre a quella persona
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="segni_amore" value="batticuore"> Mi batte forte il cuore quando la vedo
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="segni_amore" value="felicita"> Mi sento felice quando sono con lei/lui
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="segni_amore" value="gelosia"> Provo gelosia
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="segni_amore" value="nonsicuro"> Non saprei
+                </div>
+            </div>
+
+            <div class="question">
+                <label>7. Cosa significa per te essere in una relazione? (Risposta aperta)</label>
+                <textarea name="significato_relazione" rows="4"></textarea>
+            </div>
+
+            <div class="section-header">
+                <h2>Sessualità e Corpo</h2>
+            </div>
+
+            <div class="question">
+                <label>8. Ti senti a tuo agio a parlare di sessualità?</label>
+                <div class="option">
+                    <input type="radio" name="agio_sessualita" value="molto"> Molto
+                </div>
+                <div class="option">
+                    <input type="radio" name="agio_sessualita" value="abbastanza"> Abbastanza
+                </div>
+                <div class="option">
+                    <input type="radio" name="agio_sessualita" value="poco"> Poco
+                </div>
+                <div class="option">
+                    <input type="radio" name="agio_sessualita" value="perniente"> Per niente
+                </div>
+            </div>
+
+            <div class="question">
+                <label>9. Hai mai avuto esperienze sentimentali?</label>
+                <div class="option">
+                    <input type="radio" name="esp_sentimentali" value="si_attuale"> Sì, ho una relazione attualmente
+                </div>
+                <div class="option">
+                    <input type="radio" name="esp_sentimentali" value="si_passato"> Sì, in passato
+                </div>
+                <div class="option">
+                    <input type="radio" name="esp_sentimentali" value="no"> No, mai
+                </div>
+            </div>
+
+            <div class="question">
+                <label>10. Quali sono le tue principali preoccupazioni riguardo alle relazioni sentimentali?</label>
+                <div class="option">
+                    <input type="checkbox" name="preoccupazioni" value="rifiuto"> Paura del rifiuto
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="preoccupazioni" value="giudizio"> Giudizio degli altri
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="preoccupazioni" value="inesperienza"> Inesperienza
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="preoccupazioni" value="delusione"> Paura della delusione
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="preoccupazioni" value="nessuna"> Nessuna preoccupazione
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h2>Conoscenza e Consapevolezza</h2>
+            </div>
+
+            <div class="question">
+                <label>11. Sai cosa significa il termine "consenso" in una relazione?</label>
+                <div class="option">
+                    <input type="radio" name="consenso" value="si"> Sì, sono sicuro/a
+                </div>
+                <div class="option">
+                    <input type="radio" name="consenso" value="parzialmente"> Ne ho un'idea generale
+                </div>
+                <div class="option">
+                    <input type="radio" name="consenso" value="no"> No, non ne sono sicuro/a
+                </div>
+            </div>
+
+            <div class="question">
+                <label>12. Quali metodi contraccettivi conosci? (Puoi selezionare più risposte)</label>
+                <div class="option">
+                    <input type="checkbox" name="contraccezione" value="preservativo"> Preservativo
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="contraccezione" value="pillola"> Pillola anticoncezionale
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="contraccezione" value="cerotto"> Cerotto contraccettivo
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="contraccezione" value="spirale"> Spirale
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="contraccezione" value="nessuno"> Non ne conosco nessuno
+                </div>
+            </div>
+
+            <div class="question">
+                <label>13. Dove cerchi informazioni sulla sessualità e le relazioni?</label>
+                <div class="option">
+                    <input type="radio" name="info_fonte" value="internet"> Internet
+                </div>
+                <div class="option">
+                    <input type="radio" name="info_fonte" value="amici"> Amici
+                </div>
+                <div class="option">
+                    <input type="radio" name="info_fonte" value="genitori"> Genitori
+                </div>
+                <div class="option">
+                    <input type="radio" name="info_fonte" value="scuola"> Scuola/Insegnanti
+                </div>
+                <div class="option">
+                    <input type="radio" name="info_fonte" value="medico"> Medico/Specialisti
+                </div>
+            </div>
+
+            <div class="question">
+                <label>14. Come ti senti quando si parla di sessualità in classe?</label>
+                <div class="option">
+                    <input type="radio" name="sesso_classe" value="agio"> A mio agio
+                </div>
+                <div class="option">
+                    <input type="radio" name="sesso_classe" value="disagio"> In imbarazzo
+                </div>
+                <div class="option">
+                    <input type="radio" name="sesso_classe" value="indifferente"> Indifferente
+                </div>
+                <div class="option">
+                    <input type="radio" name="sesso_classe" value="interessato"> Interessato/a ma timido/a
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h2>Emozioni e Gestione delle Relazioni</h2>
+            </div>
+
+            <div class="question">
+                <label>15. Come gestisci un rifiuto sentimentale?</label>
+                <div class="option">
+                    <input type="radio" name="gestione_rifiuto" value="accetto"> Accetto e vado avanti
+                </div>
+                <div class="option">
+                    <input type="radio" name="gestione_rifiuto" value="difficile"> Mi serve molto tempo per superarlo
+                </div>
+                <div class="option">
+                    <input type="radio" name="gestione_rifiuto" value="rabbia"> Provo rabbia
+                </div>
+                <div class="option">
+                    <input type="radio" name="gestione_rifiuto" value="aiuto"> Chiedo aiuto agli amici/famiglia
+                </div>
+            </div>
+
+            <div class="question">
+                <label>16. Cosa significa per te il rispetto in una relazione? (Risposta aperta)</label>
+                <textarea name="significato_rispetto" rows="4"></textarea>
+            </div>
+
+            <div class="question">
+                <label>17. Quanto ti senti preparato/a ad affrontare una relazione sentimentale?</label>
+                <div class="option">
+                    <input type="radio" name="preparazione" value="molto"> Molto preparato/a
+                </div>
+                <div class="option">
+                    <input type="radio" name="preparazione" value="abbastanza"> Abbastanza preparato/a
+                </div>
+                <div class="option">
+                    <input type="radio" name="preparazione" value="poco"> Poco preparato/a
+                </div>
+                <div class="option">
+                    <input type="radio" name="preparazione" value="non_pronto"> Non mi sento pronto/a
+                </div>
+            </div>
+
+            <div class="question">
+                <label>18. Come reagisci quando provi gelosia?</label>
+                <div class="option">
+                    <input type="radio" name="gelosia" value="dialogo"> Ne parlo con il/la partner
+                </div>
+                <div class="option">
+                    <input type="radio" name="gelosia" value="controllo"> Cerco di controllare il/la partner
+                </div>
+                <div class="option">
+                    <input type="radio" name="gelosia" value="ignoro"> Cerco di ignorare il sentimento
+                </div>
+                <div class="option">
+                    <input type="radio" name="gelosia" value="mai"> Non ho mai provato gelosia
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h2>Social Media e Relazioni</h2>
+            </div>
+
+            <div class="question">
+                <label>19. Quanto influiscono i social media sulle tue relazioni?</label>
+                <div class="option">
+                    <input type="radio" name="social_influenza" value="molto"> Molto
+                </div>
+                <div class="option">
+                    <input type="radio" name="social_influenza" value="abbastanza"> Abbastanza
+                </div>
+                <div class="option">
+                    <input type="radio" name="social_influenza" value="poco"> Poco
+                </div>
+                <div class="option">
+                    <input type="radio" name="social_influenza" value="niente"> Per niente
+                </div>
+            </div>
+
+            <div class="question">
+                <label>20. Hai mai ricevuto richieste inappropriate sui social media?</label>
+                <div class="option">
+                    <input type="radio" name="richieste_inappropriate" value="si_spesso"> Sì, spesso
+                </div>
+                <div class="option">
+                    <input type="radio" name="richieste_inappropriate" value="si_raramente"> Sì, raramente
+                </div>
+                <div class="option">
+                    <input type="radio" name="richieste_inappropriate" value="no"> No, mai
+                </div>
+            </div>
+
+            <div class="question">
+                <label>21. Come gestisci la privacy nelle tue relazioni online?</label>
+                <div class="option">
+                    <input type="radio" name="privacy_online" value="attento"> Sono molto attento/a
+                </div>
+                <div class="option">
+                    <input type="radio" name="privacy_online" value="moderato"> Condivido con moderazione
+                </div>
+                <div class="option">
+                    <input type="radio" name="privacy_online" value="aperto"> Condivido liberamente
+                </div>
+                <div class="option">
+                    <input type="radio" name="privacy_online" value="non_uso"> Non uso social media
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h2>Valori e Aspettative</h2>
+            </div>
+
+            <div class="question">
+                <label>22. Quali valori consideri più importanti in una relazione? (Puoi selezionare più risposte)</label>
+                <div class="option">
+                    <input type="checkbox" name="valori" value="onesta"> Onestà
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="valori" value="rispetto"> Rispetto
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="valori" value="fedelta"> Fedeltà
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="valori" value="comunicazione"> Comunicazione
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="valori" value="liberta"> Libertà personale
+                </div>
+            </div>
+
+            <div class="question">
+                <label>23. Come vedi il tuo futuro sentimentale tra 5 anni?</label>
+                <div class="option">
+                    <input type="radio" name="futuro" value="relazione_stabile"> In una relazione stabile
+                </div>
+                <div class="option">
+                    <input type="radio" name="futuro" value="single"> Single per scelta
+                </div>
+                <div class="option">
+                    <input type="radio" name="futuro" value="non_so"> Non ci penso ancora
+                </div>
+                <div class="option">
+                    <input type="radio" name="futuro" value="altro"> Altro
+                </div>
+            </div>
+
+            <div class="question">
+                <label>24. Cosa pensi del matrimonio?</label>
+                <div class="option">
+                    <input type="radio" name="matrimonio" value="importante"> È importante per me
+                </div>
+                <div class="option">
+                    <input type="radio" name="matrimonio" value="non_importante"> Non è importante
+                </div>
+                <div class="option">
+                    <input type="radio" name="matrimonio" value="troppo_presto"> È troppo presto per pensarci
+                </div>
+                <div class="option">
+                    <input type="radio" name="matrimonio" value="contrario"> Sono contrario/a
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h2>Salute e Benessere</h2>
+            </div>
+
+            <div class="question">
+                <label>25. Quanto ti senti informato/a sulle malattie sessualmente trasmissibili?</label>
+                <div class="option">
+                    <input type="radio" name="info_mst" value="molto"> Molto informato/a
+                </div>
+                <div class="option">
+                    <input type="radio" name="info_mst" value="abbastanza"> Abbastanza informato/a
+                </div>
+                <div class="option">
+                    <input type="radio" name="info_mst" value="poco"> Poco informato/a
+                </div>
+                <div class="option">
+                    <input type="radio" name="info_mst" value="niente"> Per niente informato/a
+                </div>
+            </div>
+
+            <div class="question">
+                <label>26. Sai dove rivolgerti per informazioni sulla salute sessuale?</label>
+                <div class="option">
+                    <input type="radio" name="info_salute" value="si"> Sì
+                </div>
+                <div class="option">
+                    <input type="radio" name="info_salute" value="no"> No
+                </div>
+                <div class="option">
+                    <input type="radio" name="info_salute" value="non_sicuro"> Non sono sicuro/a
+                </div>
+            </div>
+
+            <div class="question">
+                <label>27. Come ti senti riguardo ai cambiamenti del tuo corpo?</label>
+                <div class="option">
+                    <input type="radio" name="cambiamenti_corpo" value="agio"> A mio agio
+                </div>
+                <div class="option">
+                    <input type="radio" name="cambiamenti_corpo" value="preoccupato"> Preoccupato/a
+                </div>
+                <div class="option">
+                    <input type="radio" name="cambiamenti_corpo" value="confuso"> Confuso/a
+                </div>
+                <div class="option">
+                    <input type="radio" name="cambiamenti_corpo" value="indifferente"> Indifferente
+                </div>
+            </div>
+
+            <div class="question">
+                <label>28. Come reagisci quando qualcuno ti fa un complimento?</label>
+                <div class="option">
+                    <input type="radio" name="reazione_complimenti" value="piacere"> Mi fa piacere
+                </div>
+                <div class="option">
+                    <input type="radio" name="reazione_complimenti" value="imbarazzo"> Mi imbarazza
+                </div>
+                <div class="option">
+                    <input type="radio" name="reazione_complimenti" value="sospetto"> Sono sospettoso/a
+                </div>
+                <div class="option">
+                    <input type="radio" name="reazione_complimenti" value="indifferente"> Sono indifferente
+                </div>
+            </div>
+
+            <div class="question">
+                <label>29. Come preferisci comunicare i tuoi sentimenti?</label>
+                <div class="option">
+                    <input type="radio" name="comunicazione_sentimenti" value="parole"> A parole, di persona
+                </div>
+                <div class="option">
+                    <input type="radio" name="comunicazione_sentimenti" value="messaggi"> Tramite messaggi
+                </div>
+                <div class="option">
+                    <input type="radio" name="comunicazione_sentimenti" value="gesti"> Con gesti e azioni
+                </div>
+                <div class="option">
+                    <input type="radio" name="comunicazione_sentimenti" value="difficolta"> Ho difficoltà a esprimerli
+                </div>
+            </div>
+
+            <div class="question">
+                <label>30. Quali sono i segnali che consideri importanti per capire se piaci a qualcuno?</label>
+                <div class="option">
+                    <input type="checkbox" name="segnali_interesse" value="sguardi"> Sguardi frequenti
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="segnali_interesse" value="messaggi"> Messaggi frequenti
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="segnali_interesse" value="attenzioni"> Attenzioni speciali
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="segnali_interesse" value="contatto"> Cerca il contatto fisico
+                </div>
+            </div>
+
+            <div class="question">
+                <label>31. Come reagisci quando vedi comportamenti discriminatori nelle relazioni?</label>
+                <div class="option">
+                    <input type="radio" name="reazione_discriminazione" value="intervengo"> Intervengo sempre
+                </div>
+                <div class="option">
+                    <input type="radio" name="reazione_discriminazione" value="parlo"> Ne parlo con altri
+                </div>
+                <div class="option">
+                    <input type="radio" name="reazione_discriminazione" value="ignoro"> Preferisco non intervenire
+                </div>
+                <div class="option">
+                    <input type="radio" name="reazione_discriminazione" value="non_visto"> Non ne ho mai visti
+                </div>
+            </div>
+
+            <div class="question">
+                <label>32. Cosa pensi della pressione dei coetanei nelle scelte sentimentali?</label>
+                <div class="option">
+                    <input type="radio" name="pressione_coetanei" value="influenza"> Mi influenza molto
+                </div>
+                <div class="option">
+                    <input type="radio" name="pressione_coetanei" value="poco"> Mi influenza poco
+                </div>
+                <div class="option">
+                    <input type="radio" name="pressione_coetanei" value="niente"> Non mi influenza
+                </div>
+                <div class="option">
+                    <input type="radio" name="pressione_coetanei" value="non_so"> Non ci ho mai pensato
+                </div>
+            </div>
+
+            <div class="question">
+                <label>33. Come ti comporti se un/a amico/a ti confida di avere problemi in una relazione?</label>
+                <div class="option">
+                    <input type="radio" name="aiuto_amici" value="ascolto"> Ascolto e supporto
+                </div>
+                <div class="option">
+                    <input type="radio" name="aiuto_amici" value="consiglio"> Do consigli pratici
+                </div>
+                <div class="option">
+                    <input type="radio" name="aiuto_amici" value="adulti"> Suggerisco di parlare con adulti
+                </div>
+                <div class="option">
+                    <input type="radio" name="aiuto_amici" value="evito"> Preferisco non essere coinvolto/a
+                </div>
+            </div>
+
+            <div class="question">
+                <label>34. Quali sono i tuoi limiti personali in una relazione? (Risposta aperta)</label>
+                <textarea name="limiti_personali" rows="4"></textarea>
+            </div>
+
+            <div class="question">
+                <label>35. Come vorresti che fosse affrontata l'educazione sentimentale a scuola?</label>
+                <div class="option">
+                    <input type="radio" name="educazione_scuola" value="piu_ore"> Più ore dedicate
+                </div>
+                <div class="option">
+                    <input type="radio" name="educazione_scuola" value="esperti"> Incontri con esperti
+                </div>
+                <div class="option">
+                    <input type="radio" name="educazione_scuola" value="discussioni"> Discussioni in classe
+                </div>
+                <div class="option">
+                    <input type="radio" name="educazione_scuola" value="non_scuola"> Preferisco non si faccia a scuola
+                </div>
+            </div>
+
+            <button type="submit">Invia il questionario</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('questionarioForm').onsubmit = function(e) {
+            e.preventDefault();
+            alert('Grazie per aver completato il questionario!');
+            // Qui si potrebbero aggiungere funzionalità per salvare i dati
+        };
+    </script>
+</body>
+</html>
